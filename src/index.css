@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm porcelain canvas, plum ink */
+    --background: 36 33% 97%; /* #FAF7F2 */
+    --foreground: 312 22% 15%; /* deep plum-ink */
+
+    --card: 0 0% 100%;
+    --card-foreground: 312 22% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 312 22% 15%;
+
+    --primary: 316 41% 30%; /* plum #6B2D5C */
+    --primary-foreground: 36 40% 98%;
+
+    --secondary: 33 33% 92%;
+    --secondary-foreground: 312 22% 20%;
+
+    --muted: 33 25% 93%;
+    --muted-foreground: 312 8% 42%;
+
+    --accent: 40 70% 51%; /* marigold */
+    --accent-foreground: 312 30% 18%;
+
+    --destructive: 0 65% 48%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 33 20% 87%;
+    --input: 33 20% 87%;
+    --ring: 316 41% 30%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(217, 154, 43, 0.06), transparent 40%),
+      radial-gradient(circle at 88% 0%, rgba(107, 45, 92, 0.06), transparent 38%);
+    background-attachment: fixed;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  /* Subtle dotted henna-style divider */
+  .henna-rule {
+    background-image: radial-gradient(currentColor 1px, transparent 1px);
+    background-size: 10px 10px;
+    height: 2px;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
