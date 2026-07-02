@@ -38,7 +38,7 @@ export const EVENTS: EventDef[] = [
     key: "ceremony",
     name: "Wedding Ceremony",
     subtitle: "Bou Bhat & reception",
-    date: "2026-10-12",
+    date: "2027-01-22",
     badge: "bg-marigold-100 text-marigold-700 border border-marigold-400/40",
     dot: "bg-marigold",
   },
